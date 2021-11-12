@@ -1,12 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Twilio Flex Web Chat</title>
     <script src="/assets/webchat-branding.js"></script>
     <script src="/assets/webchat-appConfig.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+      .container {
+        display: none;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+      }
+
+      .text {
+        font-size: 8vw;
+        font-family: system-ui;
+        width: 90%;
+        text-align: center;
+        font-weight: 200;
+      }
+
+      .show {
+        display: flex;
+      }
+
+      .Twilio-RootContainer-default {
+        display: flex;
+        justify-content: center;
+      }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+        html,
+        body {
+          /* width: 100vw;
+          height: 100vh; */
+          margin: 0;
+        }
+        .Twilio.Twilio-MainContainer {
+          position: fixed;
+          min-height: 100vh;
+
+          width: 100vw;
+          bottom: 0;
+          right: 0;
+          top: 0;
+          z-index: 10000 !important;
+        }
+        .Twilio-EntryPoint {
+          z-index: 1;
+        }
+      }
+
+      /* Landscape */
+      @media only screen and (min-device-width: 320px) and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+        html,
+        body {
+          /* width: 100%;
+          height: 100%; */
+          margin: 0;
+        }
+        .Twilio-MessageList {
+          padding: 0;
+        }
+        .Twilio.Twilio-MainContainer {
+          /* max-height: 80vh; */
+          position: fixed;
+          min-height: 100vh;
+
+          width: 100vw;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 10000 !important;
+        }
+        .Twilio-EntryPoint {
+          z-index: 1;
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>
@@ -23,11 +107,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <iframe 
-      width="500" height="250" 
-      src="https://www.youtube.com/embed/euJAcVfn0C4" 
-      title="Twilio" 
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    <iframe
+      width="500"
+      height="250"
+      src="https://www.youtube.com/embed/euJAcVfn0C4"
+      title="Twilio"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
     </iframe>
   </body>
 </html>

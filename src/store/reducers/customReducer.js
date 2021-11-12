@@ -10,28 +10,31 @@ const initialState = {
   showEndChatModal: false,
   channel: null,
   clickableMessages: [
-    {"key":"new", "message":"new"},
-    {"key":"existing", "message":"existing"}
-  ]
+    { key: "Spanish", message: "Spanish" },
+    { key: "English", message: "English" },
+  ],
 };
 
 const CustomReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_SHOW_END_CHAT_MODAL':
+    case "SET_SHOW_END_CHAT_MODAL":
       return {
         ...state,
-        showEndChatModal: action.payload.showEndChatModal
+        showEndChatModal: action.payload.showEndChatModal,
       };
-    case 'SET_CLICKABLE_MESSAGES':
+    case "SET_CLICKABLE_MESSAGES":
       return {
         ...state,
-        clickableMessages: action.payload.clickableMessages
+        clickableMessages: action.payload.clickableMessages,
       };
-    case 'SET_CHANNEL':
-        return {
-          ...state,
-          channel: action.payload.channel
-      }
+    case "SET_CHANNEL":
+      return {
+        ...state,
+        channel: action.payload.channel,
+      };
+
+    case "SET_STATE":
+      return initialState;
     default:
       return state;
   }

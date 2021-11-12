@@ -1,0 +1,30 @@
+
+{
+{
+  "clickableMessages": [
+    { "key": "Recibir una invitacion", "message": "Recibir una invitacion" },
+    { "key": "Reagendar una cuota", "message": "Reagendar una cuota" },
+    { "key": "Horario laboral", "message": "Horario laboral" },
+    { "key": "Hablar con un agente", "message": "Hablar con un agente" }
+  ]
+}
+
+
+
+
+{
+  "clickableMessages": [
+    { "key": "si", "message": "si" },
+    { "key": "no", "message": "no" },
+  ]
+}}
+
+
+{  "clickableMessages": [     { "key": "Recibir una invitacion {{flow.variables.countInbound}} ", "message": "Recibir una invitacion" },     { "key": "Reagendar una cuota {{flow.variables.countInbound}} ", "message": "Reagendar una cuota" },     { "key": "Horario laboral {{flow.variables.countInbound}} ", "message": "Horario laboral" },     { "key": "Hablar con un agente {{flow.variables.countInbound}} ", "message": "Hablar con un agente" }   ] }
+
+
+{%- if flow.variables.countInbound -%} "si" {%- else -%} "no" {%- endif -%}
+
+
+
+{%- if flow.variables.countInbound -%} {%- flow.variables.countInbound > 0 -%} "si" {%- else -%} "no" {%- endif -%}
